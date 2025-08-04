@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horarios - Doing Health Studio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #0f2027);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  color: #fff;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/logo.JPG" alt="Doing Health Studio Logo" />
+      <span class="logo-text">Doing Health Studio</span>
+    </div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="quienes.html">Quiénes Somos</a>
+      <a href="horarios.html">Nuestros Horarios</a>
+      <a href="contacto.html">Contáctanos</a>
+    </nav>
+  </header>
+  <section class="content" data-aos="fade-up" data-aos-duration="1000">
+  <h1>Nuestros Horarios</h1>
+  <div class="schedule-table">
+    <div class="day">Lunes
+      <div class="class time">5am - Pierna Inferior</div>
+      <div class="class time">6am - Pierna Inferior</div>
+      <div class="class time">7am - Pierna Inferior</div>
+      <div class="class time">5pm - Pierna Inferior</div>
+      <div class="class time">6pm - Pierna Inferior</div>
+      <div class="class time">7pm - Pierna Inferior</div>
+    </div>
+    <div class="day">Martes
+      <div class="class time">5am - Parte Superior</div>
+      <div class="class time">6am - Parte Superior</div>
+      <div class="class time">7am - Parte Superior</div>
+      <div class="class time">5pm - Parte Superior</div>
+      <div class="class time">6pm - Parte Superior</div>
+      <div class="class time">7pm - Parte Superior</div>
+    </div>
+    <div class="day">Miércoles
+      <div class="class time">5am - Cardio</div>
+      <div class="class time">6am - Cardio</div>
+      <div class="class time">7am - Cardio</div>
+      <div class="class time">5pm - Cardio</div>
+      <div class="class time">6pm - Cardio</div>
+      <div class="class time">7pm - Cardio</div>
+    </div>
+    <div class="day">Jueves
+      <div class="class time">5am - Pierna Inferior</div>
+      <div class="class time">6am - Pierna Inferior</div>
+      <div class="class time">7am - Pierna Inferior</div>
+      <div class="class time">5pm - Pierna Inferior</div>
+      <div class="class time">6pm - Pierna Inferior</div>
+      <div class="class time">7pm - Pierna Inferior</div>
+    </div>
+    <div class="day">Viernes
+      <div class="class time">5pm - Parte Superior</div>
+      <div class="class time">6pm - Parte Superior</div>
+    </div>
+    <div class="day">Sábado
+      <div class="class time">8am - Cardio</div>
+      <div class="class time">9am - Cardio</div>
+    </div>
+    <div class="day">Domingo
+      <div class="class time closed">Cerrado</div>
+    </div>
+  </div>
+</section>
+  <footer>
+    <p>&copy; 2025 Doing Health Studio. Todos los derechos reservados.</p>
+    <p>Created by <a href="#" title="Linked In"><i class="fab fa-linkedin"> Minor David Quesada Solano.</i></a></p>
+    <div class="social-icons">
+      <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+<script>
+  // Animar secciones al hacer scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+</html>
